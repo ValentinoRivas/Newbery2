@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ABM_ficha.css') }}">
+    <title>ABM-Ficha | Appont</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static',filename='img/logo_white.png') }}" alt="">
+                <p>Appont</p>
+            </div>
+            <nav>
+                <span>{{  current_user.rubro  }}</span>
+            </nav>
+            <div class="perfil" id="perfil">
+                <img src="{{ url_for('static',filename='img/person.png') }}" alt="">
+            </div>
+        </div>
+    </header>
+    <form action="/abm_ficha" method="POST">
+            <div class="form">
+                <div class="options">
+                    <div>
+                        <li class="button-exit"><a href="/ficha">Exit</a></li>
+                    </div>
+                    <div>
+                    <input type="submit" name="guardar" value="Guardar Datos">
+                    <input type="submit" name="eliminar" value="Eliminar Datos">
+                    <input type="submit" name="modificar" value="Modificar Datos">
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div class="container-targets">
+                <div class="inf-socio">
+                    <h3>Datos Socio</h3>
+                    <span>DNI:</span>
+                    <input type="text" name="dni" id="dni">
+                    <span>APELLIDO:</span>
+                    <input type="text" name="apellido" id="apellido">
+                    <span>NOMBRE:</span>
+                    <input type="text" name="nombre" id="nombre">
+                    <span>DOMICILIO:</span>
+                    <input type="text" name="domicilio" id="domicilio">
+                    <span>TELEFONO:</span>
+                    <input type="text" name="telefono" id="telefono">
+                    <span>FECHA NACIMIENTO:</span>
+                    <input type="text" name="fechaNa" id="fechaNa">
+                    <span>CARACTER SOCIO:</span>
+                    <input type="text" name="caracter" id="caracter">
+                </div>
+                <div class="inf-jug1">
+                    <h3>Datos Jugador 1</h3>
+                    <span>DISIPLINA:</span>
+                    <input type="text" name="tipo_jug1" id="tipo_jug1">
+                    <span>CATEGORIA:</span>
+                    <input type="text" name="categoria_jug1" id="categoria_jug1">
+                    <span>DNI:</span>
+                    <input type="text" name="dni_jug1" id="dni_jug1">
+                    <span>APELLIDO:</span>
+                    <input type="text" name="apellido_jug1" id="apellido_jug1">
+                    <span>NOMBRE:</span>
+                    <input type="text" name="nombre_jug1" id="nombre_jug1">
+                    <span>FECHA NACIMIENTO:</span>
+                    <input type="text" name="fechaNa_jug1" id="fechaNa_jug1">
+                </div>
+                <div class="inf-jug2">
+                    <h3>Datos Jugador 2</h3>
+                    <span>DISIPLINA:</span>
+                    <input type="text" name="tipo_jug2" id="tipo_jug2">
+                    <span>CATEGORIA:</span>
+                    <input type="text" name="categoria_jug2" id="categoria_jug2">
+                    <span>DNI:</span>
+                    <input type="text" name="dni_jug2" id="dni_jug2">
+                    <span>APELLIDO:</span>
+                    <input type="text" name="apellido_jug2" id="apellido_jug2">
+                    <span>NOMBRE:</span>
+                    <input type="text" name="nombre_jug2" id="nombre_jug2">
+                    <span>FECHA NACIMIENTO:</span>
+                    <input type="text" name="fechaNa_jug2" id="fechaNa_jug2">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/recibirDT.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+span { 
+    font-size: 1.25em;
+    color: white;
+}
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+
+header{
+    background: rgba(3, 93, 105, 0.836);
+}
+
+header .logo{
+    margin: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img{
+    height: 50px;
+    margin-right: 10px;
+    
+}
+
+header .perfil img {
+    width: 41px;
+    border-radius: 30px;
+    margin-left: 85px;
+}
+
+
+header .container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+
+.dni-container {
+    text-align: center;
+    padding: 70px;
+    background: rgba(3, 93, 105, 0.836);
+    border-radius: 6px;
+    box-shadow: 0px 0px 70px 0px black ;
+}
+
+.dni-container h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.dni-container input {
+    padding: 5px 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.span-dni {
+    margin-top: 40px;
+}
+.span-dni span {
+    font-size: 15px;
+}
+
+.img-container img {
+    width: 80px;
+    border-radius: 20px;
+}

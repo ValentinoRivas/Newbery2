@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ficha.css') }}">
+    <title>Ficha | Appont</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static',filename='img/logo_white.png') }}" alt="">
+                <p>Appont</p>
+            </div>
+            <nav>
+                <span>{{  current_user.rubro  }}</span>
+            </nav>
+            <div class="perfil" id="perfil">
+                <img src="{{ url_for('static',filename='img/person.png') }}" alt="">
+            </div>
+        </div>
+    </header>
+    <div class="form">
+        <div class="options">
+            <ul class="lista-izq" id="lista-izq">
+                <li id="list" class="list active"><a href="">Listado Fichas</a></li>
+                <li id="new"><a href="/abm_ficha">Nuevo Socio</a></li>
+            </ul>
+            <form action="/ficha" method="POST">
+                <select name="select" id="select">
+                    <option value="todos">Todos</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="futbol">Futbol</option>
+                </select>
+                <input type="search" name="buscar" id="search" placeholder="Buscar...">
+            </form>
+        </div>
+        <div class="prueba">
+        <div class="table-container" id="table-container">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>N° Socio</th>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Domicilio</th>
+                        <th>Telefono</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Caracter</th>
+                        <th>Fecha Ingreso</th>
+                        <th>Fecha Egreso</th>
+                        <th>Observacion</th>
+                        <th>Tipo</th>
+                        <th>Categoria Jug1</th>
+                        <th>Dni Jug1</th>
+                        <th>Apellido Jug1</th>
+                        <th>Nombre Jug1</th>
+                        <th>FechaNaci Jug1</th>
+                        <th>Tipo Jug2</th>
+                        <th>Categoria Jug2</th>
+                        <th>Dni Jug2</th>
+                        <th>Apellido Jug2</th>
+                        <th>Nombre Jug2</th>
+                        <th>FechaNaci Jug2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>     
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ url_for('static',filename='js/rellenarTb.js') }}"></script>
+<script src="{{ url_for('static',filename='js/enviarDT_Select.js') }}"></script>
+<script src="{{ url_for('static',filename='js/responsive.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/logo_white.png') }}">
+    <title>Home | Appont</title>
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="{{ url_for('static',filename='img/logo_white.png') }}" alt="">
+                    <p>Appont</p>
+                </div>
+                <nav>
+                    <span>{{  current_user.rubro  }}</span>
+                </nav>
+                <div class="perfil" id="perfil">
+                    <img src="{{ url_for('static',filename='img/person.png') }}" alt="">
+                </div>
+            </div>
+            <div class="cajaUsu" id="cajaUsu" >
+                <div class="infUsu">
+                    <img src="{{ url_for('static',filename='img/person.png') }}" alt="">
+                    <span>{{  current_user.nombreCompleto  }}</span>
+                </div>
+                    <div class="opciones-container">
+                        <li><a href="">Mi Perfil</a></li>
+                        <li><a href="">Suscripciones</a></li>
+                        <li><a href="{{ url_for('logout') }}">Cambiar de Cuenta</a></li>
+                        <li><a href="{{ url_for('logout') }}">Cerrar Sesion</a></li>
+                    </div>
+                </div>
+        </header>
+        <div class="form">
+            <div class="encabezado">
+                <ul class="nav">
+                    <li><a href="/ficha">Fichas</a>
+                        <ul>
+                            <li><a href="/registroSocio">Registro Socios</a></li>
+                            <li><a href="/pagarCuota">Pago De Cuotas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Herramientas</a>
+                        <ul>
+                            <li><a href="/logs">Registros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="{{ url_for('static',filename='js/open-closeUsu.js') }}"></script>
+    </body>
+</html>

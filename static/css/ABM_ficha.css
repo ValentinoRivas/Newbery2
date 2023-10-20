@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(to left, rgb(12, 113, 172), rgb(7, 170, 192));
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+span { 
+    font-size: 1.25em;
+    color: white;
+}
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+
+header{
+    background: rgba(255, 255, 255, 0.062);
+}
+
+header .logo{
+    margin: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img{
+    height: 50px;
+    margin-right: 10px;
+    
+}
+
+header .perfil img {
+    width: 41px;
+    border-radius: 30px;
+    margin-left: 85px;
+}
+
+
+header .container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-targets {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 130px;
+    justify-content: space-between;
+}
+
+.inf-socio {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(77, 71, 71, 0.39);
+    width: 30%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+span {
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input {
+    margin-bottom: 8px;
+    background: rgba(106, 188, 236, 0.288);
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    color: rgb(34, 32, 32);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.inf-socio h3 {
+    color:white;
+    text-align: center;
+}
+
+table th {
+    color: white;
+    font-size: 12px;
+}
+
+.inf-jug1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(77, 71, 71, 0.39);
+    width: 30%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 25px;
+
+}
+
+.inf-jug1 h3 {
+    color:white;
+    text-align: center;
+}
+
+.inf-jug2 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(77, 71, 71, 0.39);
+    width: 30%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.inf-jug2 h3 {
+    color:white;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.295);
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.options input {
+    padding: 5px;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    margin: 0px;
+    margin-left: 15px;
+}
+
+.button-exit {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.219);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button-exit a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:700px){
+
+    .container-targets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+    }
+    .inf-jug1 {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .inf-jug2 {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .inf-jug3 {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .inf-socio {
+        width: 90%; 
+        margin-bottom: 30px;
+    }
+  }
